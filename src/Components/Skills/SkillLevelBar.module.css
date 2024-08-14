@@ -1,0 +1,70 @@
+.skillBarContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.skillBarContainer:hover {
+    border: 1px solid rgb(90, 202, 90);
+}
+
+.skillName {
+    flex: 0 0 40%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.skillBar {
+    flex: 0 0 50%; /* Set the width to 50% */
+    position: relative;
+    height: 20px;
+    background-color: rgb(163, 228, 163);
+    border-radius: 2px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.skillLevel {
+    height: 100%;
+    background-color: rgb(91, 171, 91);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 2px;
+}
+
+.skillLevelLabel {
+    font-weight: bolder;
+    font-size: 18px;
+    color: black;
+    position: absolute;
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .skillBarContainer {
+        flex-direction: column; /* Arrange items in column */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .skillName {
+        flex: none;
+        width: 100%; /* Take full width */
+        text-align: left; /* Align text to the left */
+        margin-bottom: 10px; /* Add margin below the skill name */
+    }
+
+    .skillBar {
+        flex: none;
+        width: 100%; /* Take full width */
+        margin-left: 0; /* Remove left margin */
+    }
+}

@@ -1,0 +1,23 @@
+.contactMethods {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 80px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}

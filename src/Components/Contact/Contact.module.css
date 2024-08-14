@@ -1,0 +1,18 @@
+.contact_heading {
+    font-size: 70px;
+    margin-left: 150px; /* Original style for larger screens */
+    padding-top: 30px;
+    text-align: left; /* Default alignment */
+    margin-top: 0;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .contact_heading {
+        font-size: 40px;
+        margin-left: 20px; /* Adjusted for smaller screens */
+        padding-top: 20px;  
+        padding-left: 0;
+        text-align: center; /* Center alignment for mobile */
+    }
+}

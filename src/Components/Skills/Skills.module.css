@@ -1,0 +1,21 @@
+.skills_heading {
+    font-size: 70px;
+    margin-left: 150px; /* Original style for larger screens */
+    padding-top: 30px;
+    text-align: left; /* Default alignment */
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .skills_heading {
+        font-size: 40px; /* Optional: Adjust font size for better readability */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        text-align: center; /* Center align the heading */
+        padding-top: 20px; /* Optional: Adjust top padding for better spacing */
+    }
+}
+
+.skills_availableSkills {
+    margin-bottom: 100px;
+}

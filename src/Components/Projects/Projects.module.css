@@ -1,0 +1,124 @@
+.projectsSection {
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.projects_heading {
+    font-size: 70px;
+    margin-left: 150px; /* Original style for larger screens */
+    padding-top: 30px;
+    text-align: left; /* Default alignment */
+    margin-top: 0;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px; /* Gap between cards */
+}
+
+.card {
+    position: relative;
+    width: calc((100% - 100px) / 3); /* Adjust width to fit the container, accounting for gaps */
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%; /* Full height to cover entire card */
+    object-fit: cover;
+}
+
+.cardContent {
+    opacity: 0; /* Hide content by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for overlay effect */
+    color: #ffffff; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .cardContent {
+    opacity: 1; /* Show content on hover */
+}
+
+.cardContent h3, .cardContent p {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px; /* Gap between buttons */
+}
+
+.btn {
+    background-color: transparent;
+}
+
+.githubButton,
+.videoButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.githubButton svg,
+.videoButton svg {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+    .projects_heading {
+        font-size: 50px; /* Adjusted font size for medium screens */
+        margin-left: 20px; /* Adjust margin for medium screens */
+        text-align: center; /* Center align text on medium screens */
+    }
+
+    .cardsContainer {
+        gap: 20px; /* Reduce gap between cards */
+    }
+
+    .card {
+        width: calc((100% - 40px) / 2); /* Adjust card width for tablets and medium screens */
+        height: 400px; /* Maintain the same height */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects_heading {
+        font-size: 35px; /* Further reduced font size for smaller screens */
+        margin-left: 10px; /* Further adjust margin for smaller screens */
+    }
+
+    .cardsContainer {
+        gap: 15px; /* Further reduce gap between cards */
+    }
+
+    .card {
+        width: calc((100% - 20px) / 1); /* Adjust card width for smaller screens */
+        height: 400px; /* Maintain the same height */
+    }
+}

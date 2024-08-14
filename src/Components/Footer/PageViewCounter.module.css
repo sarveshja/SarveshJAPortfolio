@@ -1,0 +1,12 @@
+.pageviewcounter_content {
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.pageviewcounter_count {
+    line-height: 0.2rem;
+    text-align: center;
+    width: 100%;
+}
+

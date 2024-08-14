@@ -1,0 +1,75 @@
+.main_bg_img {
+    background: url("./assets/mainBgImg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+  }
+  
+  .footer_bg_img {
+    background: url("./assets/footerBgImg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 65vh;
+    width: 100vw;
+    border: 0;
+  }
+  
+  /* Keyframes for the fade and slide effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Main overlay for the transition effect */
+  .transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 252, 252, 0.7); /* Semi-transparent background */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 0.5s;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Content fade effect */
+  .content {
+    animation: fadeIn 0.5s forwards;
+  }

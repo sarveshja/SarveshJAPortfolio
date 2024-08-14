@@ -1,0 +1,115 @@
+/* Education.module.css */
+
+.education_heading {
+    font-size: 70px;
+    margin-left: 150px; /* Original style for larger screens */
+    padding-top: 30px;
+    text-align: left; /* Default alignment */
+    margin-top: 0;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.container {
+    text-align: center;
+    color: white;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 20px;
+    padding-bottom: 100px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cardContent {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.certificates {
+    margin-top: 20px;
+}
+
+.certificates .cards {
+    gap: 150px;
+}
+
+.certificates .card {
+    border: 3px solid white;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.button:hover {
+    background-color: lightgray;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .education_heading {
+        font-size: 50px; /* Smaller font size for mobile */
+        margin-left: 20px; /* Adjust margin for mobile */
+        text-align: center; /* Center align text on mobile */
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        gap: 20px; /* Reduce gap between cards */
+    }
+
+    .card {
+        width: 80%; /* Adjust card width for mobile */
+        margin: 0 auto; /* Center align card */
+    }
+    
+    .certificates .cards {
+        gap: 20px; /* Reduce gap between cards in certificates section */
+    }
+}
+
+@media (max-width: 480px) {
+    .education_heading {
+        font-size: 35px; /* Further reduce font size for very small screens */
+        margin-left: 10px; /* Further adjust margin for very small screens */
+    }
+
+    .cards {
+        gap: 10px; /* Further reduce gap between cards */
+    }
+
+    .card {
+        width: 85%; /* Further adjust card width */
+    }
+    
+    .button {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for button */
+    }
+}

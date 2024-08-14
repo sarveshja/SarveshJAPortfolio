@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh; /* Ensure full height */
+    flex-direction: row;
+  }
+  
+  .textContainer {
+    flex: 0 0 60%; /* 60% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    height: 100%; /* Full height */
+  }
+  
+  .name {
+    font-family: "Permanent Marker", cursive;
+    font-size: 80px;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .designation {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .imageContainer {
+    flex: 0 0 40%; /* 40% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height */
+  }
+  
+  .profileImageContainer {
+    position: relative;
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+  }
+  
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the container */
+    border: 5px solid transparent; /* Ensures the border won't overlap */
+    box-sizing: border-box; /* Ensures padding is included */
+  }
+  
+  .rotatingBorder {
+    position: absolute;
+    top: -5px; /* Adjust to align the border perfectly */
+    left: -5px; /* Adjust to align the border perfectly */
+    width: 310px; /* Slightly larger than the image to fit around it */
+    height: 310px; /* Slightly larger than the image to fit around it */
+    border-radius: 50%;
+  
+    padding: 5px; /* Optional: Adds space between the image and border */
+    box-sizing: border-box; /* Include padding and border in the image's total width and height */
+    box-shadow: 0 0 20px rgba(238, 238, 242, 1); /* Glow effect */
+  }
+  
+  /* Keyframes for rotating border */
+  @keyframes rotateBorder {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .buttonContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .resume_button {
+    background-color: transparent; /* White background with 50% opacity */
+    border: 2px solid white;
+    color: white;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 50%;
+    height: 60px;
+    font-size: 25px;
+    margin-bottom: 100px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .resume_button:hover {
+    transform: scale(1.3);
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+      height: auto; /* Adjust height to fit content */
+    }
+  
+    .textContainer {
+      flex: 0 0 auto; /* Reset to auto width */
+      font-size: 28px; /* Smaller font size for mobile */
+    }
+  
+    .name {
+      font-size: 60px; /* Smaller font size for mobile */
+    }
+  
+    .imageContainer {
+      flex: 0 0 auto; /* Reset to auto width */
+      margin-top: 20px; /* Add some space above */
+    }
+  
+    .profileImageContainer {
+      width: 200px; /* Adjust size as needed */
+      height: 200px; /* Adjust size as needed */
+    }
+  
+    .rotatingBorder {
+      width: 210px; /* Slightly larger than the image to fit around it */
+      height: 210px; /* Slightly larger than the image to fit around it */
+      top: -5px; /* Adjust to align the border perfectly */
+      left: -5px; /* Adjust to align the border perfectly */
+    }
+  
+    .resume_button {
+      width: 70%; /* Adjust button width for mobile */
+      font-size: 20px; /* Smaller font size for mobile */
+      margin-bottom: 50px; /* Adjust bottom margin for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .textContainer {
+      font-size: 22px; /* Further reduce font size for very small screens */
+    }
+  
+    .name {
+      font-size: 40px; /* Further reduce name font size */
+    }
+  
+    .resume_button {
+      width: 80%; /* Adjust button width for very small screens */
+      font-size: 18px; /* Further reduce button font size */
+      height: 50px; /* Smaller button height */
+    }
+  }
